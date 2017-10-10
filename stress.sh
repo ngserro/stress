@@ -16,7 +16,7 @@ cd fio-3.0/
 sudo make
 sudo make install
 
-device_unparsed=`sudo fdisk -l | grep 1098 | awk '{print $2}'`
+device_unparsed=`sudo fdisk -l | grep 1098 | tail -1 | awk '{print $2}'`
 
 device="${device_unparsed/:/}"
 
